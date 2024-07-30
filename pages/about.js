@@ -34,7 +34,7 @@ const sectionTitleStyle = {
 };
 
 function About() {
-  const rubyIcon = "/media/images/ruby.png"; // Sicherstellen, dass der Pfad korrekt ist
+  const rubyIcon = "/portfolio/media/images/ruby.png"; // Sicherstellen, dass der Pfad korrekt ist
   return (
     <Container maxWidth="md">
       <Box sx={{ textAlign: 'center', margin: '40px 0' }}>
