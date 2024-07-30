@@ -5,6 +5,7 @@ import Head from 'next/head';
 import { Container, Typography, Box, Paper } from '@mui/material';
 import theme from '@/src/theme';
 import { styled } from '@mui/system';
+import PixelArtBook from '@/components/PixelArtBook';
 
 // Styled Component für animierte Vokale
 const AnimatedLetter = styled('span')(({ theme, delay }) => ({
@@ -20,6 +21,23 @@ const AnimatedLetter = styled('span')(({ theme, delay }) => ({
   },
 }));
 
+const Overlay = styled(Box)({
+  position: 'absolute',
+  top: 0,
+  left: 0,
+  right: 0,
+  bottom: 0,
+  backgroundColor: 'rgba(0, 0, 0, 0.95)',
+  color: 'white',
+  display: 'flex',
+  alignItems: 'center',
+  justifyContent: 'center',
+  fontSize: '24px',
+  paddingBottom: '8px',
+  border: '4px solid #ffffff',
+  zIndex: 1, // Setzt das Overlay über den Inhalt
+});
+
 const Home = () => {
   const title = "Welcome to my Website";
   const vowels = 'AEIOUaeiouy';
@@ -27,7 +45,7 @@ const Home = () => {
   return (
     <>
       <Head>
-        <title>Entwickler Portfolio</title>
+        <title>Morten's Website</title>
         <meta name="description" content="Portfolio" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
@@ -50,28 +68,23 @@ const Home = () => {
         <Box sx={{ display: 'flex' }}>
           <Box sx={{ flex: 1, display: 'flex', justifyContent: 'center' }}>
             <Paper elevation={9} sx={{ backgroundColor: theme.palette.primary.deep, color: theme.palette.secondary.main }}>
-              <Typography variant="h6" component="p" sx={{ marginBottom: 4, padding: 2 }}>
-                My name is Morten. Lorem Ipsum. Lorem Ipsum. Lorem Ipsum. Lorem Ipsum. Lorem Ipsum. Lorem Ipsum. Lorem Ipsum. Lorem Ipsum. Lorem Ipsum.
-                Lorem Ipsum.Lorem Ipsum.Lorem Ipsum.Lorem Ipsum.Lorem Ipsum.Lorem Ipsum.Lorem Ipsum.Lorem Ipsum.Lorem Ipsum.Lorem Ipsum.Lorem Ipsum.Lorem Ipsum.Lorem Ipsum.Lorem Ipsum.Lorem Ipsum.
-                Lorem Ipsum.Lorem Ipsum.Lorem Ipsum.Lorem Ipsum.Lorem Ipsum.Lorem Ipsum.Lorem Ipsum.Lorem Ipsum.Lorem Ipsum.Lorem Ipsum.Lorem Ipsum.Lorem Ipsum.Lorem Ipsum.
+              <Typography variant="h5" component="p" sx={{ marginBottom: 4, padding: 2 }}>
+               This is a website made with the use of next.js and Material UI... <br/><br/> I wanted to give this website a retro game flair like one of my favorite games Mega Man... <br/><br/> This is still one of my first solo projects and I will try to update it regularly and more projects are going to follow...
+
               </Typography>
             </Paper>
           </Box>
           <Box sx={{ flex: 1, display: 'flex', justifyContent: 'center' }}>
-            <Typography variant="h6" component="p" sx={{ marginBottom: 4, padding: 2 }}>
-              My name is Morten. Lorem Ipsum. Lorem Ipsum. Lorem Ipsum. Lorem Ipsum. Lorem Ipsum. Lorem Ipsum. Lorem Ipsum. Lorem Ipsum. Lorem Ipsum.
-              Lorem Ipsum.Lorem Ipsum.Lorem Ipsum.Lorem Ipsum.Lorem Ipsum.Lorem Ipsum.Lorem Ipsum.Lorem Ipsum.Lorem Ipsum.Lorem Ipsum.Lorem Ipsum.Lorem Ipsum.Lorem Ipsum.Lorem Ipsum.Lorem Ipsum.
-              Lorem Ipsum.Lorem Ipsum.Lorem Ipsum.Lorem Ipsum.Lorem Ipsum.Lorem Ipsum.Lorem Ipsum.Lorem Ipsum.Lorem Ipsum.Lorem Ipsum.Lorem Ipsum.Lorem Ipsum.Lorem Ipsum.
-              
-            </Typography>
-          </Box>
+  <PixelArtBook/>
+</Box>
+
         </Box>
 
-        <Box sx={{ marginTop: 4 }}>
+        <Box sx={{ position: 'relative', marginTop: 4 }}>
           <Typography variant="h4" component="h2" align="center" gutterBottom>
             Meine Projekte
           </Typography>
-          <Box sx={{ display: 'grid', gridTemplateColumns: { xs: '1fr', md: '1fr 1fr', lg: '1fr 1fr 1fr' }, gap: 2 }}>
+          <Box sx={{ display: 'grid', gridTemplateColumns: { xs: '1fr', md: '1fr 1fr', lg: '1fr 1fr 1fr' }, gap: 2, position: 'relative' }}>
             {/* Beispielprojekte */}
             <Box sx={{ padding: 2, border: '1px solid', borderRadius: 1, boxShadow: 1 }}>
               <Typography variant="h6" component="h3">
@@ -98,6 +111,10 @@ const Home = () => {
               </Typography>
             </Box>
           </Box>
+          <Overlay>
+            Area not unlocked yet <br/>
+            Will be unlocked soon
+          </Overlay>
         </Box>
       </Container>
     </>

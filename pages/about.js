@@ -38,7 +38,7 @@ function About() {
   return (
     <Container maxWidth="md">
       <Box sx={{ textAlign: 'center', margin: '40px 0' }}>
-        <RetroTitle variant="h2">About Me</RetroTitle>
+        <Typography variant="h2" component="h1">About Me</Typography>
       </Box>
 
       <Box sx={sectionBoxStyle}>

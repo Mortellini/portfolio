@@ -45,8 +45,8 @@ const BackgroundWrapper = styled(Box)({
     left: '-50%',
     width: '200%',
     height: '200%',
-    backgroundImage: 'url(./media/images/stars.png)', // Pfad zum Sternenmuster
-    backgroundSize: '180px 180px',
+    backgroundImage: 'url(./media/images/sky2.jpg)', // Pfad zum Sternenmuster
+    backgroundSize: '400px 400px',
     animation: 'float 30s linear infinite',
     opacity: 0.8,
   },

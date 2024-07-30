@@ -2,6 +2,7 @@
 import React from 'react';
 import { Container, Typography, Box, TextField, Button } from '@mui/material';
 import { styled } from '@mui/system';
+import theme from '../src/theme'
 
 // Stil für den Button
 const StyledButton = styled(Button)({
@@ -97,6 +98,7 @@ function Contact() {
           Send
         </StyledButton>
       </Box>
+      <Typography sx={{color: theme.palette.secondary.main}}>This form is not functional yet!</Typography>
     </Container>
   );
 }
