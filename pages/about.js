@@ -2,6 +2,7 @@
 import React from 'react';
 import { Container, Typography, Box } from '@mui/material';
 import RetroTitle from '../components/RetroTitle';
+import { Global, css } from '@emotion/react';
 
 const listStyle = {
   listStyleType: 'none',

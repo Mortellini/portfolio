@@ -3,6 +3,7 @@ import React from 'react';
 import { Container, Typography, Box, TextField, Button } from '@mui/material';
 import { styled } from '@mui/system';
 import theme from '../src/theme'
+import { Global, css } from '@emotion/react';
 
 // Stil für den Button
 const StyledButton = styled(Button)({

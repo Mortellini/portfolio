@@ -1,3 +1,39 @@
 /* In deiner globalen CSS-Datei */
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap');
+
+.container {
+    height: 100vh; /* Macht die Container-Höhe gleich der Höhe des Viewports */
+    overflow-y: auto; /* Fügt einen Scrollbalken hinzu, wenn der Inhalt höher ist */
+  }
+
+  .flex-container {
+    display: flex;
+    flex-direction: column; /* Elemente vertikal anordnen */
+    height: 100vh; /* Volle Höhe des Viewports */
+  }
+  
+  .flex-item {
+    flex: 1; /* Elemente teilen den verfügbaren Raum gleichmäßig auf */
+    min-height: 0; /* Wichtig, um Überlauf zu verhindern */
+  }
+  
+  @media (max-width: 600px) {
+    .retroframe {
+      width: 100%;
+      margin: 0;
+      border-radius: 0;
+    }
+
+    .flex-box{
+      flex-direction: column;
+    }
+  }
+  
+  @media (min-width: 601px) {
+    .retroframe {
+      max-width: 1200px;
+      margin: 0 auto;
+      border-radius: 8px;
+    }
+  }

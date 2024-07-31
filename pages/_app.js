@@ -28,6 +28,8 @@ const RetroFrame = styled(Box)({
   minHeight: '100vh', // Volle Höhe des Viewports
   boxSizing: 'border-box', // Um sicherzustellen, dass Padding und Border im Box-Modell enthalten sind
   backgroundImage: "none",
+  display: "flex",
+  flexDirection: "column",
 });
 
 const BackgroundWrapper = styled(Box)({
@@ -47,7 +49,7 @@ const BackgroundWrapper = styled(Box)({
     height: '200%',
     backgroundImage: 'url(/portfolio/media/images/sky2.jpg)', // Pfad zum Sternenmuster
     backgroundSize: '400px 400px',
-    animation: 'float 30s linear infinite',
+    animation: 'float 20s linear infinite',
     opacity: 0.8,
   },
   '@keyframes float': {
@@ -75,7 +77,7 @@ function MyApp({ Component, pageProps }) {
             `}
             />
       <BackgroundWrapper>
-      <RetroFrame>
+      <RetroFrame className='retroframe'>
         <Navbar />
       <Component {...pageProps} />
       </RetroFrame>

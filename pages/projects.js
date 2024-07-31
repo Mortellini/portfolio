@@ -2,6 +2,7 @@
 import React from 'react';
 import { Container, Box, Typography } from '@mui/material';
 import { styled } from '@mui/system';
+import { Global, css } from '@emotion/react';
 
 
 const PongContainer = styled(Box)({

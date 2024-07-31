@@ -6,6 +6,7 @@ import { Container, Typography, Box, Paper } from '@mui/material';
 import theme from '@/src/theme';
 import { styled } from '@mui/system';
 import PixelArtBook from '@/components/PixelArtBook';
+import { Global, css } from '@emotion/react';
 
 // Styled Component für animierte Vokale
 const AnimatedLetter = styled('span')(({ theme, delay }) => ({
@@ -65,7 +66,7 @@ const Home = () => {
             })}
           </Typography>
         </Box>
-        <Box sx={{ display: 'flex' }}>
+        <Box className="flex-box" sx={{ display: 'flex', flexDirection: "row" }}>
           <Box sx={{ flex: 1, display: 'flex', justifyContent: 'center' }}>
             <Paper elevation={9} sx={{ backgroundColor: theme.palette.primary.deep, color: theme.palette.secondary.main }}>
               <Typography variant="h5" component="p" sx={{ marginBottom: 4, padding: 2 }}>
