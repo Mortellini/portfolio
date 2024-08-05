@@ -1,8 +1,8 @@
 // pages/about.js
 import React from 'react';
 import { Container, Typography, Box } from '@mui/material';
+import AnimatedImage from '@/components/AnimatedImage';
 import RetroTitle from '../components/RetroTitle';
-import { Global, css } from '@emotion/react';
 
 const listStyle = {
   listStyleType: 'none',
@@ -42,23 +42,28 @@ function About() {
         <Typography variant="h2" component="h1">About Me</Typography>
       </Box>
 
-      <Box sx={sectionBoxStyle}>
-        <Typography component="h3" variant="h5" style={sectionTitleStyle}>
-          Introduction
-        </Typography>
-        <Typography paragraph sx={{paddingLeft: "8px"}}>
-          Hello! I'm Morten, a passionate frontend developer with a focus on creating beautiful and functional user experiences. I am currently a Computer Science student at the university of applied science Hamburg (HAW).
-          My next goal is to write my bachelor thesis. <br /> <br />
-          My biggest interest right now are the Stormlight Archives Novels by Brandon Sanderson, currently reading Words of Radiance. <br />
-          Also, I am trying to improve my coding skills and achieve a healthier lifestyle.
-        </Typography>
+      <Box sx={{ ...sectionBoxStyle, display: 'flex', flexDirection: { xs: 'column', sm: 'row' } }}>
+        <Box sx={{ flex: 7, paddingRight: { xs: '0', sm: '16px' }, paddingBottom: { xs: '16px', sm: '0' } }}>
+          <Typography component="h3" variant="h5" style={sectionTitleStyle}>
+            Introduction
+          </Typography>
+          <Typography paragraph>
+            Hello! I'm Morten, a passionate frontend developer with a focus on creating beautiful and functional user experiences. I am currently a Computer Science student at the university of applied science Hamburg (HAW).
+            My next goal is to write my bachelor thesis. <br /> <br />
+            My biggest interest right now are the Stormlight Archives Novels by Brandon Sanderson, currently reading Words of Radiance. <br />
+            Also, I am trying to improve my coding skills and achieve a healthier lifestyle.
+          </Typography>
+        </Box>
+        <Box sx={{ flex: 3 }}>
+          <AnimatedImage />
+        </Box>
       </Box>
 
       <Box sx={sectionBoxStyle}>
         <Typography component="h3" variant="h5" style={sectionTitleStyle}>
           Technical Skills
         </Typography>
-        <Typography paragraph sx={{paddingLeft: "8px"}}>
+        <Typography paragraph sx={{ paddingLeft: "8px" }}>
           I specialize in:
           <ul style={listStyle}>
             <li style={listItemStyle}><img src={rubyIcon} alt="Ruby Icon" style={rubyStyle} /> Frontend Development: React, Next.js, Material-UI, JavaScript </li>
@@ -72,7 +77,7 @@ function About() {
         <Typography component="h3" variant="h5" style={sectionTitleStyle}>
           Personal Interests
         </Typography>
-        <Typography component="div" sx={{paddingLeft: "8px"}}>
+        <Typography component="div" sx={{ paddingLeft: "8px" }}>
           <ul style={listStyle}>
             <li style={listItemStyle}>
               <img src={rubyIcon} alt="Ruby Icon" style={rubyStyle} />
